@@ -1,0 +1,132 @@
+*{
+    /* 边距 */
+    margin: 0;
+    /* 填充 */
+    padding: 0;
+}
+.w{
+    /* 这个页面的版心是1200像素,每个版心都要水平居中对齐,可以定义版心为公共类: */
+    width: 1200px;
+    margin: auto;
+}
+body{
+    background-color: #f3f5f7;
+}
+.header{
+    height: 42px;
+
+    /* 上下30px左右居中 */
+    /*注意此地方会层叠W里面的margin */
+    margin: 30px auto;
+}
+.logo{
+    width: 198px;
+    height: 42px;
+
+    /* 左浮动 */
+    float: left;
+}
+li{
+    /* 去掉li前的小点 */
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.nav{
+    /* 左浮动父元素的左边（浮动元素不会盖住其他的浮动元素） */
+    float: left;
+    margin-left: 60px;
+}
+.nav ul li{
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a{
+    /* 指定对象为块元素 */
+    display: block;
+    height: 42px;
+    /* 上下为0左右为10px */
+    padding: 0 10px;
+    /* （设置行高）如果高度一样则将文字在父元素中垂直居中(height: 42px;可以不写) */
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav ul li a:hover{
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+/* 搜索模块 */
+.search{
+    width: 412px;
+    height: 42px;
+
+    float: left;
+    margin-left: 70px;
+}
+.search input{
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid skyblue;
+    border-right: none;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.search button{
+    width: 50px;
+    height: 42px;
+    background: url(/学成在线/img/fa.png);
+    /* 按钮有边框手动去掉边框 */
+    border: none;
+    float: left;
+}
+.user{
+    line-height: 42px;
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+/* banner开始 */
+.banner{
+    height: 421px;
+    background-color: #1c036c;
+}
+.banner .w{
+    height: 421px;
+    /* 不重复，垂直靠上，水平居中对齐。 */
+    background: url(/学成在线/img/banner.jpg) no-repeat top center;
+}
+.subnav{
+    width: 190px;
+    height: 421px;
+    /* 红绿蓝半透明度 */
+    background: rgba(0, 0, 0, 0.3);
+    float: left;
+}
+.subnav ul li{
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+.subnav ul li a{
+    font-size: 14px;
+    color: #fff;
+}
+.subnav ul li a span{
+    float: right;
+}
+.subnav ul li a:hover{
+    color: #00a4ff;
+}
+.course{
+    width: 230px;
+    height: 300px;
+    background-color: pink;
+    float: right;
+    /* 浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+}
